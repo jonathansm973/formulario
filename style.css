@@ -1,0 +1,144 @@
+:root{
+    --colorp:#253ee1;
+}
+
+*{
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+body{
+
+    font-family: "Roboto", sans-serif;
+    background-color: #e5e5f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form{
+
+    width: 90%;
+    background-color: white;
+    /* margin: 0 auto; */
+    max-width: 400px;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 5px 100px -10px rgb(0, 0, 3);
+    text-align: center;
+
+}
+
+.form_titulo{
+
+    color: black;
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+.form_texto{
+
+    color: grey;
+    margin-bottom: 3em;
+
+}
+
+.form_link{
+
+    color: black;
+    font-weight:500;
+}
+
+
+/* .form_contenedor{
+
+  
+
+
+} */
+
+.form_contenido{
+
+    margin-bottom: 3em;
+    --color: #5757577e;
+    position: relative;
+    
+
+}
+
+.form_input{
+
+    width: 100%;
+    background: none;
+    font-family: inherit;
+    font-size: 1em;
+    color: #706c6c;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+
+}
+
+.form_input:not(:placeholder-shown) + .form_label,
+.form_input:focus + .form_label{
+    
+    transform: translateY(-12px) scale(.7);
+    transform-origin: top left;
+    --color:#253ee1;
+}
+
+
+.form_enviar{
+
+    width: 100%;
+    background-color: var(--colorp);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #e5e5f7;
+    font-family: inherit;
+    font-size: 1.3em;
+}
+
+.form_label{
+
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    left: 5px;
+    transform: translateY(10px);
+    transition: transform .5s, color .3s;
+
+}
+
+
+.form_line{
+
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 1px;
+    background-color: var(--colorp);
+    transform: scale(0);
+    transform-origin: left bottom;
+    transition: transform .5s;
+}
+
+
+.form_input:not(:placeholder-shown) ~ .form_line,
+.form_input:focus ~ .form_line
+{
+    
+    transform: scale(1);
+
+}
+
+
+
+
+
